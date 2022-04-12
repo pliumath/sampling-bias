@@ -13,18 +13,37 @@ library(grid)
 ##########################################
 #functions
 
-nullmodaccu <- function(downsampled,dans){
+nullmodaccu <- function(downsampled){
   
   N <- downsampled$Nnode 
-  p = sum(downsampled$tip.state == 1)/(N+1)
+  
+  n0 <- round(sum(downsampled$tip.state == 0)*(N)/(N+1)) #get yellow proportion
+  n1 <- round(sum(downsampled$tip.state == 1)*(N)/(N+1))
   
   results <- c()
   
-  accuracy <-  cbind(abs(dans$lik.anc[,2] - rep(p,N)),1-abs(dans$lik.anc[,2] - rep(p,N)))
+  for (i in 1:50) {
+    
+    rand.state <- sample(1:N,n1) #assign random states to internal nodes
+    states <- rep(0,N)
+    states[rand.state] <- 1
+    nms <- names(downsampled$node.state)
+    names(states) <- nms
+    downsampled$node.state <- states
+    
+    sh <- history.from.sim.discrete(downsampled, 0:1)
+    
+    dans <- ace(downsampled$tip.state, downsampled, type = "d") #reconstruct ancestral states on the downsampled tree
+    
+    accuracy <-  cbind(abs(dans$lik.anc[,2] - downsampled$node.state),1-abs(dans$lik.anc[,2] - downsampled$node.state))
+    results[i] <- mean(accuracy[,2])
+    
+  }
   
-  return(mean(accuracy[,2])) 
+  return(mean(results)) 
   
 }
+
 
 ##########################################
 ##########################################
