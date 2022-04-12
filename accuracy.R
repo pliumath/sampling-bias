@@ -49,7 +49,7 @@ nullmodaccu <- function(downsampled){
 ##########################################
 #load true trees
 
-load("truetree07.Rdata")
+load("truetree01.Rdata")
 
 h <- history.from.sim.discrete(phy, 0:1)
 
@@ -162,4 +162,6 @@ p <- ggplot(ma4p, aes(x=prop, y=accu)) +
 tp <- set_panel_size(p,width = unit(16, "cm"),height = unit(9, "cm"))
 
 grid.draw(tp)
+
+
 
