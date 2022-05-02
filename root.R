@@ -117,7 +117,7 @@ for (i in 1:l) {
 
 ##########################################
 ##########################################
-##visualization
+##visualization (Fig S12 S13)
 
 
 rootdata <- as.data.frame(rtstacc)
