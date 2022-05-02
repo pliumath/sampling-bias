@@ -111,7 +111,7 @@ for (i in 1:l) {
 
 ##########################################
 ##########################################
-##visualization
+##visualization (Fig S8)
 
 res4plot <- as.data.frame(res)
 res4plot <- melt(res4plot)
