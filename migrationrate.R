@@ -74,7 +74,7 @@ for (i in 1:l) {
 
 ##########################################
 ##########################################
-##visualization
+##visualization (Fig 3)
 
 
 mr4plot <- as.data.frame(mrate)
