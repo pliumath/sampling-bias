@@ -130,7 +130,7 @@ for (i in 1:l) {
 
 ##########################################
 ##########################################
-##visualization
+##visualization (Fig S3 S4)
 
 tesyy4p <- as.data.frame(tesyy)
 tesyy4p <- melt(tesyy4p)
