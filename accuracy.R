@@ -109,7 +109,7 @@ for (i in 1:l) {
 
 ##########################################
 ##########################################
-##visualization
+##visualization (Fig 1, Fig S1, for trees see Line 56)
 
 
 ma4p <- as.data.frame(meanaccu)
