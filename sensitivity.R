@@ -135,7 +135,7 @@ for (kk in 1:KK) {
 
 ##########################################
 ##########################################
-##visualization
+##visualization (Fig S2)
 
 data4j <- as.data.frame(Accu)
 data4j <- melt(data4j)
