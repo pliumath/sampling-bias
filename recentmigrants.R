@@ -128,7 +128,7 @@ for (i in 1:l) {
 
 ##########################################
 ##########################################
-##visualization
+##visualization (Fig 2, S6)
 
 meanaccu4plot <- as.data.frame(meanaccu)
 
