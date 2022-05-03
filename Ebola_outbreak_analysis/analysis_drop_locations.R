@@ -223,7 +223,7 @@ for(i in num_tip+1:(num_tip+len)){
 }
 
 ###############################################
-#plot the downsampled tree depends on Guinea or Sierra Leone
+#plot the downsampled tree depends on Guinea or Sierra Leone to generate supplementary Figure S9 and S10
 ###############################################
 
 plot_ds <- as.treedata(tree10)
