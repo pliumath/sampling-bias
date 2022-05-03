@@ -304,7 +304,7 @@ lik_ds_true <- inset(true_down_traverlers_treeshape, true_tree1pies_lik,width = 
 plot14 <- plot(lik_ds_true)
 
 ###############################################
-#arrange and save the plots
+#arrange and save the plots to generate Figure 5
 ###############################################
 
 p = ggarrange(true_tree_circular,true_down_traverlers_circular,down_travelers_circular,nrow=1,common.legend = TRUE,legend = "right")
