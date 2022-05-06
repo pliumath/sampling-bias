@@ -119,10 +119,14 @@ phy4 = phy
 
 df4 =  getMigrationInfo(phy )
 
-p1 = getPanel(phy=phy1, mydf = df1, mytitle = TeX("Migration rate $\\alpha = 0.1$"))
-p2 = getPanel(phy=phy2,  mydf =df2, mytitle = TeX("Migration rate $\\alpha = 0.3$"))
-p3 = getPanel(phy=phy3,  mydf =df3, mytitle = TeX("Migration rate $\\alpha = 0.7$"))
-p4 = getPanel(phy=phy4, mydf = df4, mytitle = TeX("Migration rate $\\alpha = 0.9$"))
+p1 = getPanel(phy=phy1, mydf = df1, thisalpha = 0.1, 
+              mytitle = TeX("Migration rate $\\alpha = 0.1$"))
+p2 = getPanel(phy=phy2,  mydf =df2, thisalpha = 0.3, 
+              mytitle = TeX("Migration rate $\\alpha = 0.3$"))
+p3 = getPanel(phy=phy3,  mydf =df3, thisalpha = 0.7, 
+              mytitle = TeX("Migration rate $\\alpha = 0.7$"))
+p4 = getPanel(phy=phy4, mydf = df4, thisalpha = 0.9, 
+              mytitle = TeX("Migration rate $\\alpha = 0.9$"))
 
 p1
 p2
